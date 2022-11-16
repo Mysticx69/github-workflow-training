@@ -4,7 +4,7 @@ name: Shell Commands
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-shell-command: ##Job1
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -21,7 +21,7 @@ jobs:
           print(platform.processor())
         shell: python
 
-  run-windows-command:
+  run-windows-command: ##Job2
     runs-on: windows-latest
     needs: ["run-shell-command"]
     steps:
